@@ -1,0 +1,35 @@
+# Write a program to print the Fibonacci series   
+
+package Assessment;
+
+import java.util.Scanner;
+
+public class Fabanacii {
+    //by using recursion
+    static int a=-1,b=1,ans,count=1;
+    public static void fabanaci(int n){
+
+        if(count<=n){
+            ans=a+b;
+            System.out.println(ans);
+            a=b;
+            b=ans;
+            count++;
+            fabanaci(n);
+        }}
+    public static void main(String args[]){
+        Scanner s=new Scanner(System.in);
+        System.out.println("enter the number:");
+        int  n=s.nextInt();
+        //using for loop
+        int a=-1,b=1,ans;
+        for(int i=1;i<=n;i++){
+            ans=a+b;
+            System.out.println(ans);
+            a=b;
+            b=ans;
+        }
+        //using recursion
+        fabanaci(n);
+    }
+}
